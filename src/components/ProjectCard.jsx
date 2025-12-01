@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { getTechIcon } from '../utils/techIcons';
 
 const ProjectCard = ({ project }) => {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -9,51 +13,61 @@ const ProjectCard = ({ project }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       whileHover={{ y: -8 }}
-      className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+      className="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700"
     >
-      <div className="relative h-48 bg-gray-200 overflow-hidden">
-        {/* Para usar imagens reais, descomente a linha abaixo e comente o div placeholder */}
+      <div className="relative h-64 overflow-hidden">
         {project.image ? (
-          <img
+          <motion.img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4 }}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center text-gray-600">
-            <span className="text-sm font-medium">Imagem do Projeto</span>
+          <div className="w-full h-full bg-stone-300 flex items-center justify-center">
+            <span className="text-stone-500">Project Image</span>
           </div>
         )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">
-          {project.title}
-        </h3>
-        <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-          {project.description}
-        </p>
-        <div className="flex gap-3">
-          <a
-            href={project.github}
+      
+      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+        <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+        
+        {/* Technologies Icons */}
+        {project.technologies && (
+          <div className="flex flex-wrap gap-3 mb-4">
+            {project.technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.2, y: -2 }}
+                className="w-8 h-8 flex items-center justify-center bg-slate-700/50 backdrop-blur-sm rounded-lg border border-slate-600 hover:bg-slate-600 transition-all"
+                title={tech}
+              >
+                {getTechIcon(tech)}
+              </motion.div>
+            ))}
+          </div>
+        )}
+        
+        {project.demo && (
+          <motion.a
+            href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white text-stone-900 rounded-lg text-sm font-semibold hover:bg-stone-100 transition-all"
           >
-            <Github size={16} />
-            Ver GitHub
-          </a>
-          {project.demo && (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
-            >
-              <ExternalLink size={16} />
-              Visitar Site
-            </a>
-          )}
-        </div>
+            <ExternalLink size={16} />
+            {t('projects.checkLive')}
+          </motion.a>
+        )}
       </div>
     </motion.div>
   );

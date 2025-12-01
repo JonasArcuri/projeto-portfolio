@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou Jonas",
+    "title": "Desenvolvedor Full-Stack",
+    "subtitle": "Transformando conceitos em fluxos otimizados",
+    "description": "Sou um desenvolvedor full-stack do Brasil transformando ideias em sites e aplicativos fluidos.",
+    "showWork": "Ver meus projetos",
+    "contact": "Entre em contato"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "subtitle": "Desenvolvedor Full‑Stack",
+    "description": "Sou um desenvolvedor full‑stack focado em criar experiências web rápidas e fluidas com React, Node.js e tecnologias modernas. Adoro combinar design e engenharia para entregar produtos claros, bem documentados e fáceis de evoluir.",
+    "priorities": {
+      "title": "Eu priorizo",
+      "collaboration": "Colaboração com clientes, promovendo comunicação aberta",
+      "flexibility": "Sou muito flexível com comunicações em diferentes fusos horários",
+      "improvement": "Constantemente busco melhorar"
+    },
+    "techStack": "Minha stack tecnológica"
+  },
+  "projects": {
+    "title": "Uma pequena seleção de projetos recentes",
+    "checkLive": "Ver Site",
+    "viewGithub": "Ver GitHub"
+  },
+  "contact": {
+    "title": "Pronto para levar sua presença digital para o próximo nível?",
+    "subtitle": "Entre em contato hoje e vamos discutir como posso ajudá-lo a alcançar seus objetivos.",
+    "getInTouch": "Vamos conversar",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "send": "Enviar Mensagem"
+    },
+    "social": "Redes Sociais"
+  },
+  "footer": {
+    "copyright": "Copyright ©",
+    "rights": "Todos os direitos reservados"
+  }
+}
+

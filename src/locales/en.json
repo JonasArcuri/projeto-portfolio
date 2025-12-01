@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Jonas",
+    "title": "Full-Stack Developer",
+    "subtitle": "Transforming concepts into optimized flows",
+    "description": "I'm a full-stack developer from Brazil transforming ideas into fluid websites and apps.",
+    "showWork": "Show my work",
+    "contact": "Get in touch"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Full‑stack developer",
+    "description": "I'm a full‑stack developer focused on building fast, fluid web experiences with React, Node.js, and modern technologies. I love combining design and engineering to deliver clear, well‑documented products that are easy to evolve.",
+    "priorities": {
+      "title": "I prioritize",
+      "collaboration": "Client collaboration, fostering open communication",
+      "flexibility": "I'm very flexible with time zone communications",
+      "improvement": "I constantly try to improve"
+    },
+    "techStack": "My tech stack"
+  },
+  "projects": {
+    "title": "A small selection of recent projects",
+    "checkLive": "Check Live Site",
+    "viewGithub": "View GitHub"
+  },
+  "contact": {
+    "title": "Ready to take your digital presence to the next level?",
+    "subtitle": "Reach out to me today and let's discuss how I can help you achieve your goals.",
+    "getInTouch": "Let's get in touch",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    },
+    "social": "Social Media"
+  },
+  "footer": {
+    "copyright": "Copyright ©",
+    "rights": "All rights reserved"
+  }
+}
+

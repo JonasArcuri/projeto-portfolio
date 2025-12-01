@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { language, changeLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,13 @@ const Header = () => {
     }
   };
 
+  const navItems = [
+    { id: 'home', key: 'home' },
+    { id: 'sobre', key: 'about' },
+    { id: 'projetos', key: 'projects' },
+    { id: 'contato', key: 'contact' },
+  ];
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -26,7 +35,7 @@ const Header = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-sm'
+          ? 'bg-slate-900/95 backdrop-blur-lg shadow-lg border-b border-slate-800'
           : 'bg-transparent'
       }`}
     >
@@ -34,61 +43,88 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-xl font-semibold text-gray-900 cursor-pointer"
+            whileTap={{ scale: 0.95 }}
+            className="text-xl font-bold cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            Portfolio
+            {scrolled ? (
+              <span className="text-white">Portfolio</span>
+            ) : (
+              <span className="text-white">Portfolio</span>
+            )}
           </motion.div>
-          <ul className="hidden md:flex items-center space-x-8">
-            <li>
+          <div className="flex items-center gap-6">
+            <ul className="hidden md:flex items-center space-x-6">
+              {navItems.map((item, index) => (
+                <li key={item.id}>
+                  <motion.button
+                    onClick={() => scrollToSection(item.id)}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ y: -2 }}
+                    className={`relative px-4 py-2 font-medium text-sm transition-colors ${
+                      scrolled
+                        ? 'text-slate-300 hover:text-white'
+                        : 'text-slate-300 hover:text-white'
+                    }`}
+                  >
+                    {t(`header.${item.key}`)}
+                    <motion.div
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.button>
+                </li>
+              ))}
+            </ul>
+            
+            {/* Language Selector */}
+            <div className="flex items-center gap-2 border-l border-slate-700 pl-6">
               <button
-                onClick={() => scrollToSection('home')}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                onClick={() => changeLanguage('en')}
+                className={`px-3 py-1 text-sm font-medium transition-colors ${
+                  language === 'en'
+                    ? 'text-white border-b-2 border-blue-500'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
               >
-                Home
+                EN
               </button>
-            </li>
-            <li>
               <button
-                onClick={() => scrollToSection('sobre')}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
+                onClick={() => changeLanguage('pt')}
+                className={`px-3 py-1 text-sm font-medium transition-colors ${
+                  language === 'pt'
+                    ? 'text-white border-b-2 border-blue-500'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
               >
-                Sobre
+                PT
               </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection('projetos')}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
-              >
-                Projetos
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection('contato')}
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
-              >
-                Contato
-              </button>
-            </li>
-          </ul>
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-gray-900">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            </div>
+
+            {/* Mobile Menu Button */}
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              className={`md:hidden ${scrolled ? 'text-white' : 'text-white'}`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </motion.button>
+          </div>
         </div>
       </nav>
     </motion.header>

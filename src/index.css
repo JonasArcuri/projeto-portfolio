@@ -12,9 +12,24 @@ body {
   font-family: 'Inter', 'Poppins', 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #020617;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-stone-600 to-stone-800;
+  }
+  
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  .glow {
+    box-shadow: 0 0 20px rgba(120, 113, 108, 0.2);
+  }
 }
 
