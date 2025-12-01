@@ -2,6 +2,7 @@
   "header": {
     "home": "Home",
     "about": "About",
+    "experience": "Experience",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -24,6 +25,27 @@
       "improvement": "I constantly try to improve"
     },
     "techStack": "My tech stack"
+  },
+  "experience": {
+    "title": "My work experience",
+    "subtitle": "Building impactful solutions at leading companies",
+    "highlights": "Key Achievements",
+    "pichau": {
+      "role": "Front-end Developer",
+      "period": "Current",
+      "description": "Front-end Developer at Pichau, one of Brazil's largest e-commerce platforms for gaming computers and hardware. Working on high-performance, scalable solutions that serve millions of users.",
+      "highlight1": "Developed and maintained user-facing features using modern frontend technologies",
+      "highlight2": "Optimized performance and user experience for high-traffic e-commerce platform",
+      "highlight3": "Collaborated with cross-functional teams to deliver innovative solutions"
+    },
+    "totvs": {
+      "role": "Back-end Developer",
+      "period": "Previous",
+      "description": "Back-end Developer at TOTVS SC (Santa Catarina), a branch of TOTVS SA, Latin America's largest technology company. Developed robust enterprise solutions and APIs for business management systems.",
+      "highlight1": "Designed and developed scalable backend systems and RESTful APIs",
+      "highlight2": "Implemented database solutions and optimized query performance",
+      "highlight3": "Worked with enterprise-grade technologies and best practices"
+    }
   },
   "projects": {
     "title": "A small selection of recent projects",
