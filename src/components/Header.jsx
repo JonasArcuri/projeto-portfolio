@@ -19,8 +19,20 @@ const Header = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMobileMenuOpen(false); // Fecha o menu mobile ao clicar
+      // Fecha o menu mobile primeiro
+      setMobileMenuOpen(false);
+      
+      // Pequeno delay para garantir que o menu feche antes de scrollar
+      setTimeout(() => {
+        const headerHeight = 80; // Altura aproximada do header
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 100);
     }
   };
 
