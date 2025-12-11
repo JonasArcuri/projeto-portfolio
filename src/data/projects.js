@@ -23,7 +23,7 @@ export const projects = [
   {
     id: 3,
     title: "Landing Page Energético Pichau",
-    image: "/projects/PichauEnergy.jpg",
+    image: "/projects/Energetico.jpg",
     description: "Landing Page Energético Pichau, com API de Locais que comercializam o energético Pichau.",
     technologies: ["React", "JavaScript", "REST API", "Leaflet Maps"],
     github: "https://github.com/JonasArcuri/site-energetico-pichau",
