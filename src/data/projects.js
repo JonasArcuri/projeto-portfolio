@@ -55,7 +55,7 @@ export const projects = [
     description: "Sistema de Gestão Financeira Pessoal",
     technologies: ["React", "Node.js", "Next.js", "Firebase", "TypeScript", "OAuth"],
     github: "https://github.com/JonasArcuri/planejamento-financeiro",
-    demo: "https://github.com/JonasArcuri/planejamento-financeiro",
+    demo: "https://planejamento-financeiro-ten.vercel.app/",
   },
 ];
 
