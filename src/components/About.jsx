@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
@@ -11,6 +11,8 @@ const About = () => {
     { name: 'Express', color: 'bg-stone-600' },
     { name: 'Vue.js', color: 'bg-stone-500' },
     { name: 'GraphQL', color: 'bg-stone-600' },
+    { name: 'CSS', color: 'bg-stone-600'},
+    { name: 'Javascript', color: 'bg-stone-600'},
   ];
 
   const priorities = [

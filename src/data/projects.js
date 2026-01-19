@@ -39,5 +39,23 @@ export const projects = [
     github2: "https://github.com/JonasArcuri/projeto-motoboy",
     demo: null,
   },
+    {
+    id: 5,
+    title: "Domus Aurea",
+    image: "/projects/domus.jpg",
+    description: "Landing Page feita para escritório de Gestão Condominial",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    github: "https://github.com/JonasArcuri/domus-aurea",
+    demo: "https://domus-aurea-beta.vercel.app/",
+  },
+      {
+    id: 6,
+    title: "Sistema Planejamento Financeiro",
+    image: "/projects/PlanejamentoFinanceiro.jpg",
+    description: "Sistema de Gestão Financeira Pessoal",
+    technologies: ["React", "Node.js", "Next.js", "Firebase", "TypeScript", "OAuth"],
+    github: "https://github.com/JonasArcuri/planejamento-financeiro",
+    demo: "https://github.com/JonasArcuri/planejamento-financeiro",
+  },
 ];
 
