@@ -8,11 +8,13 @@ const About = () => {
     { name: 'React', color: 'bg-stone-700' },
     { name: 'Node.js', color: 'bg-stone-600' },
     { name: 'TypeScript', color: 'bg-stone-700' },
-    { name: 'Express', color: 'bg-stone-600' },
     { name: 'Vue.js', color: 'bg-stone-500' },
-    { name: 'GraphQL', color: 'bg-stone-600' },
     { name: 'CSS', color: 'bg-stone-600'},
+    { name: 'HTML', color: 'bg-stone-600'},
     { name: 'Javascript', color: 'bg-stone-600'},
+    { name: 'Postgresql', color: 'bg-stone-600'},
+    { name: 'Java', color: 'bg-stone-600'},
+    { name: 'Spring', color: 'bg-stone-600'},
   ];
 
   const priorities = [

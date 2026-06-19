@@ -4,6 +4,25 @@
 export const projects = [
   {
     id: 1,
+    title: "Landing Page Energético Pichau",
+    image: "/projects/EnergeticoPichau.jpg",
+    description: "Landing Page Energético Pichau, com API de Locais que comercializam o energético Pichau.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/JonasArcuri/energetico-pichau",
+    demo: "https://pichauenergy.com.br/"
+  },
+  {
+    id: 2,
+    title: "Sanoj Sistemas",
+    image: "/projects/SanojSistemas.jpg",
+    description: "Site para empresa Criada em meu nome",
+    technologies: ["React", "Vue.js", "Node.js", "Express", "Tailwind"],
+    github: "https://github.com/JonasArcuri/moto-connect",
+    github2: "https://github.com/JonasArcuri/projeto-motoboy",
+    demo: "https://www.sanojsistemas.com.br/",
+  },
+  {
+    id: 3,
     title: "Landing Page LN Colors",
     image: "/projects/LnColors.jpg",
     description: "Landing page moderna desenvolvida em React com animações suaves.",
@@ -12,7 +31,7 @@ export const projects = [
     demo: "https://www.lncolors.com.br/"
   },
   {
-    id: 2,
+    id: 4,
     title: "Landing Page Nova Solidum",
     image: "/projects/NovaSolidum.jpg",
     description: "Landing Page Nova Solidum Financeira, com sistema de login e cadastro.",
@@ -20,26 +39,8 @@ export const projects = [
     github: "https://github.com/JonasArcuri/nova-solidum",
     demo: "https://www.novasolidumfinance.com.br/"
   },
+
   {
-    id: 3,
-    title: "Landing Page Energético Pichau",
-    image: "/projects/Energetico.jpg",
-    description: "Landing Page Energético Pichau, com API de Locais que comercializam o energético Pichau.",
-    technologies: ["React", "JavaScript", "REST API", "Leaflet Maps"],
-    github: "https://github.com/JonasArcuri/site-energetico-pichau",
-    demo: "https://pichauenergy.com.br/"
-  },
-  {
-    id: 4,
-    title: "Sistema MotoConnect",
-    image: "/projects/MotoConnect.jpg",
-    description: "Um sistema feito para conectar motoboys e estabelecimentos, com sistema de login e cadastro, contratação de freelances e gerenciamento.",
-    technologies: ["React", "Node.js", "Express", "PostgreSQL", "TypeScript"],
-    github: "https://github.com/JonasArcuri/moto-connect",
-    github2: "https://github.com/JonasArcuri/projeto-motoboy",
-    demo: null,
-  },
-    {
     id: 5,
     title: "Domus Aurea",
     image: "/projects/domus.jpg",
@@ -48,7 +49,7 @@ export const projects = [
     github: "https://github.com/JonasArcuri/domus-aurea",
     demo: "https://domus-aurea-beta.vercel.app/",
   },
-      {
+  {
     id: 6,
     title: "Sistema Planejamento Financeiro",
     image: "/projects/PlanejamentoFinanceiro.jpg",
